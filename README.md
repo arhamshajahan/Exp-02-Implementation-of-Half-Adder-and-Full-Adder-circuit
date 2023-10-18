@@ -1,4 +1,4 @@
-# Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit
+# Exp-03-Implementation-of-Half-Adder-and-Full-Adder-circuit
 
 # Implementation-of-Half-Adder-and-Full-Adder-circuit
 ### AIM:
@@ -36,19 +36,50 @@ Switch ON the main switch
 If the output is 1, then the led glows.
 ### 
 Program:
-/*
+```
 Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
-Logic symbol & Truthtable
-RTL realization
+Developed by: ARHAM S
+RegisterNumber: 212222110005
 
-### Output:
-### RTL
-### TIMING DIAGRAM
+1. Program to design a half adder:
+
+module ex3(a,b,sum,carry);
+input a,b;
+output sum,carry;
+assign sum=a^b;
+assign carry=a&b;
+endmodule 
+
+2. Program to design a full adder:
+
+module ex31(a,b,cin,sum,carry);
+input a,b,cin;
+output sum,carry;
+assign sum=a^b^cin;
+assign carry=(a&b)|((a^b)&cin);
+endmodule
+```
+#### Truthtable:
+#### half adder Truthtable:
+![265264461-19858532-c597-436f-9664-fe5791928f78](https://github.com/22009011/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/118343461/fde446d1-ebe8-4e92-b272-95b06a0d9af4)
+
+#### full adder:
+![265264801-afc4522a-f291-40a5-845c-32c14bb92999](https://github.com/22009011/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/118343461/d8b8b362-979c-4b1f-b06b-12b8e123a164)
 
 
-### TRUTH TABLE 
+#### RTL realization
+#### halr adder:
+![265263880-f7cfff41-9671-4c3c-b523-7edd2074233b](https://github.com/22009011/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/118343461/6c814fe7-2ba7-43ed-a479-92f32abb9546)
+#### full adder:
+![265263971-7cb66c1f-4a79-4103-99ca-b50942d250cd](https://github.com/22009011/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/118343461/8473c09b-7d9d-4e2c-b0a2-a0a5ce14897e)
+
+
+### Output waveform:
+#### half adder:
+![265263920-c3ece2e7-b7ce-4c6f-961a-ebebbec90493](https://github.com/22009011/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/118343461/b5bebd5f-cefe-4ad3-b537-3b14ecd486ee)
+#### half adder:
+![265264031-dfd139bf-43ed-4300-80e0-398ca22f45ff](https://github.com/22009011/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/118343461/4c015082-ede6-4cb3-859f-a81d3b8d0314)
+
 
 ### Result:
+Thus the half adder and full adder circuit are designed and the truth table for half adder and full adder are verified.
